@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C:\Users\Yzy\Desktop\Html学习\jq\jq.txt.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input id="inp">
+    <button id="btnget">发起post请求</button>
+    <script>
+        $(function() {
+            $('#inp').on('input',function(){
+                var word = document.getElementById('inp').value;
+                var target = 'https://sug.so.360.cn/suggest?word='+word;
+                var result = ''
+                console.log(target);
+                $.ajax({
+                    type: 'GET', //请求的方式
+                    url: target, // 请求的URL地址
+                    data: {},
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                    success: function(res) {
+
+                        console. log (res)
+                    }
+                })
+            })
+            $('#btnget').on('click',function() {
+                $.ajax({
+                    type: 'GET', //请求的方式
+                    url: 'https://sug.so.360.cn/suggest?word=hello', // 请求的URL地址
+                    data: { id: 1 },// 这次请求要携带的数据
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                    success: function(res) {
+                           console. log (res)
+                    }
+                })
+ 
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!--
+        实现左侧logo
+        <link rel="shortcut icon" href="图片url或本地位置">
+    -->
+    
+
+    <title>Html学习笔记</title>
+
+    <!--base描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接-->
+    <base href="http://www.runoob.com/" target="_blank">
+    <!--
+        <link> 标签通常用于链接到外部样式表:
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    -->
+
+    <!--
+        <meta> 标签通常用于指定网页的描述，关键词，文件的最后修改时间，作者，和其他元数据。
+    -->
+
+    <meta name="description" content="9.26Html语言的学习内容">
+    <meta name="author" content="余">
+
+    <!--
+        <script>标签用于加载脚本文件，如： JavaScript。
+    -->
+</head>
+<body>
+    <h1>我的第一个标题</h1><hr>
+    <!--hr在界面内生成一条分割线-->
+
+    <h2 style="background-color:green;font-family:arial;color:red;font-size:20px;text-align:center;">
+        我的第二个标题,但字体大小是20px，背景颜色为绿色，居中对齐，内联样式
+    </h2><hr>
+
+    <p>
+        我的第一个段落。
+        <br>
+        用来展示
+        <br>
+        分行的效果
+    </p><hr>
+
+    <p>
+        我的第二个段落,用来展示图片<br>
+        <img id="miku" src="C:\Users\Yzy\Desktop\Html学习\miku.jpg" alt="图像未能加载显示该内容" width="160" height="90"/><hr>
+    </p>
+
+    <p>
+        我的第三个段落，用来展示超链接
+        <a href="https://www.baidu.com"><br>访问百度</a><br>
+        不仅文字，图片也可以作为超链接的载体<br>
+        可以为图片本身增加边框<br>
+
+        <a href="https://www.baidu.com">
+            <img border="10" src="C:\Users\Yzy\Desktop\Html学习\miku.jpg" alt="图像未能加载显示该内容" width="160" height="90"/>
+        </a>
+        <hr>
+    </p>
+
+    <p>
+        <b>我的</b><br>
+        <i>第四个段落</i><br>
+        用来展示<br>
+        <sub>html</sub>
+        <sup>格式化</sup><br>
+        <ins>插入字</ins><br>
+        <del>删除字</del><br>
+        <em>着重字</em><br>
+        <small>小号字</small><br>
+        <strong>加重语气</strong><br>
+
+        <code>定义计算机代码</code><br>
+
+        <hr>
+    </p>
+    
+    <p>
+        我的第五个段落，用来演示表格
+        <h4>一列:</h4>
+        <table border="1">
+            <tr>
+                <td>100</td>
+            </tr>
+        </table>
+
+        <h4>一行三列:</h4>
+        <table border="1">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+        </table>
+
+        <h4>两行三列:</h4>
+        <table border="1">
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+        </table>
+
+        <h4>带表头的表格:</h4>
+        <table border="1">
+            <caption>Table Name</caption>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+            </tr>
+            <tr>
+                <td>row 2, cell 1</td>
+                <td>row 2, cell 2</td>
+            </tr>
+        </table>
+
+        <h4>单元格跨两列:</h4>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+
+        <h4>单元格跨两行:</h4>
+        <table border="1">
+        <tr>
+        <th>First Name:</th>
+        <td>Bill Gates</td>
+        </tr>
+        <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>555 77 854</td>
+        </tr>
+        <tr>
+        <td>555 77 855</td>
+        </tr>
+        </table>
+
+        <hr>
+
+    </p>
+
+    <p>
+        第六个段落，列表<br>
+        <h4>无序列表:</h4>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <h4>有序列表:</h4>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+          
+        <ol start="50">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+
+        <h4>自定义列表:</h4>
+        <!--
+            自定义列表不仅仅是一列项目，而是项目及其注释的组合。
+            自定义列表以 <dl> 标签开始。每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 <dd> 开始。
+        -->
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+        <h4>嵌套列表：</h4>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+                </ul>
+            </li>
+            <li>Milk</li>
+        </ul><hr>
+
+    </p>
+
+    <p>
+        HTML div 元素是块级元素，它可用于组合其他 HTML 元素的容器。<br>
+        HTML span 元素是内联元素，可用作文本的容器
+        <div style="color:#0000FF">
+            <h3>这是一个在 div 元素中的标题。</h3>
+            <p>这是一个在 div 元素中的文本。</p>
+        </div>
+        我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。
+        <br>
+        布局见HTMLdiv文件<hr>
+
+    </p>
+
+    <p>
+        <h4>表单（输入框）：</h4>
+        <form action="">
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname">
+        </form>
+        <br>
+        <form action="">
+            Username: <input type="text" name="user"><br>
+            Password: <input type="password" name="password">
+        </form>
+
+        <!-- 以下表单使用 GET 请求发送数据到当前的 URL，method 默认位 GET。 -->
+        <form>
+            <label>Name:
+            <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+        
+        <!-- 以下表单使用 POST 请求发送数据到当前的 URL。 -->
+        <form method="post">
+            <label>Name:
+            <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+        
+        <!-- 表单使用 fieldset, legend, 和 label 标签 -->
+        <form method="post">
+            <fieldset>
+            <legend>Title</legend>
+            <label><input type="radio" name="radio"> Select me</label>
+            </fieldset>
+        </form>
+        <hr>
+        
+    </p>
+
+    <p>
+        框架
+        <br>
+        <iframe src="C:\Users\Yzy\Desktop\Html学习\HTMLdiv.html" width="200" height="200"></iframe>
+    </p>
+    
+    
+</body>
+</html>
